@@ -1,0 +1,63 @@
+.space {
+	height: 1px;
+	float: left; 
+}
+
+.menu-area {
+	position: fixed;
+	width: 100%; 
+	bottom:12px;
+}
+
+.menu {
+	width: 96%;
+	height: 92px;
+	background-color: rgb(91,206,191);
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+}
+
+.menu-item {
+	float: left;
+}
+
+.menu-item a {
+	width: 64px;
+	height: 64px;
+	font-size: 54px;
+	color: rgb(253, 242, 204);
+	border: solid 5px rgb(253, 242, 204);
+	border-radius: 20px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	display: -ms-box;
+	-ms-box-orient: vertical;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+	display: box;
+	box-orient: vertical;
+	box-pack: center;
+	box-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+}
+
+.menu-item a i {
+	display: inherit;
+}
+
+.menu li a span {
+	width: 64px;
+	font-size: 14px;
+	color: rgb(253, 242, 204);
+	font-weight: bold;
+}

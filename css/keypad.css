@@ -1,0 +1,56 @@
+#keypad {
+    background-color: rgb(172, 206, 194);
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 96px;
+}
+
+#display {
+    width: 90%;
+    height: 200px;
+    text-align: center;
+    border: solid 5px rgb(253, 242, 204);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+#hidden-color {
+    display: none;
+    background-color: rgb(94, 161, 166);
+}
+
+#pad {
+	position: relative;
+}
+
+.button {
+    float: left;
+    width: 20%;
+    height: 50px;
+    background-color: rgb(94, 161, 166);
+    border: solid 5px rgb(253, 242, 204);
+    border-radius: 20px;
+    margin: 2px 2px 2px 2px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-orient: vertical;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-orient: vertical;
+    box-pack: center;
+    box-align: center;
+}
+.button span {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(253, 242, 204);
+}
