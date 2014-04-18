@@ -17,18 +17,31 @@ Domain Path: /languages
 
 /******************** End activate and delete related function ********************/
 
-/******************** Start stylesheet and js in the menu screen ********************/
-	function mobile_scripts_and_stylesheets () {
-		if ( !is_admin() ) {
-			wp_enqueue_script('mobile-menu', plugins_url('js/front-end-menu.js', __FILE__), array(), '1.0.0', ture);
-			wp_enqueue_script('mobile-keypad', plugins_url('js/front-end-keypad.js', __FILE__), array(), '1.0.0', ture);
-			wp_enqueue_style('mobile-menu-css', plugins_url('css/front-end-menu.css', __FILE__), array(), '1.0.0');
-			wp_enqueue_style('mobile-keypad-css', plugins_url('css/keypad.css', __FILE__), array(), '1.0.0');
-		}
+/******************** Start stylesheet and js in front end ********************/
+	function mobile_scripts_and_stylesheets () { 
+		wp_enqueue_script('mobile-menu', plugins_url('js/front-end-menu.js', __FILE__), array(), '1.0.0', ture);
+		wp_enqueue_script('mobile-keypad', plugins_url('js/front-end-keypad.js', __FILE__), array(), '1.0.0', ture);
+		wp_enqueue_style('mobile-menu-css', plugins_url('css/front-end-menu.css', __FILE__), array(), '1.0.0');
+		wp_enqueue_style('mobile-keypad-css', plugins_url('css/keypad.css', __FILE__), array(), '1.0.0');
 	}
 
 	add_action('wp_enqueue_scripts', 'mobile_scripts_and_stylesheets');
 /******************** End enqueue ********************/
+
+/******************** Start style and js in admin panel ********************/
+	function ginger_menu_admin_enqueue () {
+		$screen= get_current_screen();
+		if( $screen->base == "nav-menus"){
+			wp_enqueue_script('admin-isotope', plugins_url('js/isotope.pkgd.js', __FILE__), array(), '1.0.0', ture);
+			//wp_enqueue_script('admin-isotope-search', plugins_url('js/isotope-search.js', __FILE__), array(), '1.0.0', ture);
+			wp_enqueue_script('admin-ginger-menu', plugins_url('js/admin-ginger-menu.js', __FILE__), array(), '1.0.0', ture);
+			wp_enqueue_style('amdin-ginger-menu-css', plugins_url('css/admin-ginger-menu.css', __FILE__), array(), '1.0.0');		
+			wp_enqueue_style('amdin-ginger-icon-css', plugins_url('css/font-awesome.min.css', __FILE__), array(), '1.0.0');
+		}
+	}
+
+	add_action('admin_enqueue_scripts', 'ginger_menu_admin_enqueue');
+/******************** End admin enqueue ********************/
 
 /******************** Start add icon support to menu ********************/
 /******************** End icon support ********************/

@@ -1,12 +1,17 @@
+.ginger-footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
 .space {
 	height: 1px;
 	float: left; 
 }
 
 .menu-area {
-	position: fixed;
+	position: relative; 
 	width: 100%; 
-	bottom:12px;
 }
 
 .menu {
@@ -60,4 +65,8 @@
 	font-size: 14px;
 	color: rgb(253, 242, 204);
 	font-weight: bold;
+}
+
+.space-for-menu {
+	height: 92px;
 }
